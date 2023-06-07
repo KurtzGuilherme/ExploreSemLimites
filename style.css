@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-body: 'Mulish', sans-serif;
+
+  --fs-h2: 3rem;
+
+  --white: hsl(0, 0%, 100%);
+  --bg-page: hsl(276, 33%, 97%);
+  --bg-base:hsl(244, 38%, 28%);
+
+  --fc-primary: hsl(243, 38%, 28%);
+  --fc-secondary: hsl(320, 69%, 42%);
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--fc-primary);
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}
+
+.page {
+  margin: 0 auto;
+  background: var(--bg-page);
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding:0 3.4rem 9.3rem 3.2rem;
+}
+
+header h1 {
+  font-size: var(--fs-h2);
+  color: var(--fc-secondary);
+  font-weight: 900;
+  line-height: 4rem;
+  margin-top: 1.7rem;
+}
+
+header p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+header .btn-arrow{
+  width: 5.8rem;
+  height: 10.5rem;
+  border: 4px solid var(--fc-secondary);
+  border-radius: 76rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+header .btn-arrow:hover {
+  filter: brightness(0.5);
+}
+
+header .btn-arrow img {
+  width: 3rem;
+}
+
+#content{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 4.9rem;
+  background: var(--bg-base);
+  padding: 5.3rem 3.9rem 5.5rem;
+}
+
+#content .card {
+  padding: 2.6rem 6rem 2.6rem 2.6rem;
+  border-radius: 2rem;
+  background: var(--white);
+}
+
+#content .card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+#content .card h3{
+  width: 26.5rem;
+  font-size: var(--fs-h2);
+  color: var(--fc-secondary);
+  font-weight: 900;
+  line-height: 3.7rem;
+}
+
+#content .card p{
+  width: 26.5rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+#contact{
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+#contact form h2{
+  font-size: var(--fs-h2);
+  color: var(--fc-secondary);
+  font-weight: 900;
+  line-height: 3.4rem;
+
+  padding-bottom:4.3rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--bg-base);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  font-size: 1.6rem;
+}
+
+#contact form textarea {
+  height: 12.6rem;
+}
+
+#contact form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+#contact form button {
+  background: var(--bg-base);
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+}
+
+#contact form button:hover {
+  filter: brightness(0.7);
+}
+
+#name {
+  background: url(img/person.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url(img/at.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#contact .stars{
+  display: none;
+}
+
+footer {
+  text-align: center;
+  background: var(--bg-base);
+
+  padding: 1.6rem;
+}
+
+footer  p{
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--white);
+}
+
+@media (min-width: 1440px) {
+
+  .page {
+    width: 144rem;
+    background: var(--bg-page);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    text-align: justify;
+    max-height: 83.6rem;
+  }
+
+  header .astronaut {
+    order: 2;
+  }
+
+  header  h1 {
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+    font-weight: 900;
+  }
+  
+  header .title {
+    order: 1;
+    margin-top: 30.7rem;
+  }
+  
+  header .title p {
+    padding-bottom: 17.7rem;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  
+  header .title .btn-arrow {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  #content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  
+  #contact {
+    display: flex;
+    align-items: center;
+    gap: 9.2rem;
+    margin: 0 auto;
+    background: url(img/stars.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  #contact form {
+    width: 50%;
+  }
+}
+  
+.c-pointer{
+  cursor: pointer;
+}
